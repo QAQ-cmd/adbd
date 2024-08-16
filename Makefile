@@ -32,7 +32,7 @@ src/adbd/adbd.a: src/adbd/Makefile FORCE
 src/libcutils/libcutils.a: src/libcutils/Makefile FORCE
 	$(MAKE) -C src/libcutils libcutils.a
 adbd_debug: src/main.c src/adbd/adbd.a src/libcutils/libcutils.a
-	$(CC) -o $@ $(CFLAGS) $(LDFLAGS) $^ $(LIBS)
+	$(CC) -o $@ $(CFLAGS) $(LDFLAGS) $^ $(LIBS) -static
 adbd: adbd_debug
 	$(STRIP) $< -o $@
 configs/adbd.service: configs/adbd.service.in
