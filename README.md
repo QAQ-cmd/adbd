@@ -10,6 +10,6 @@ Cross compile for example:
 
 `export PATH=/opt/imx6_4.0/linux-gnueabihf-4.7/bin:$PATH`
 
- 2.make
+ 2. make
 
 `CC=arm-linux-gnueabihf-gcc STRIP=arm-linux-gnueabihf-strip make`
