@@ -82,7 +82,8 @@ static size_t fill_connect_data(char*buf,size_t bufsize){
 	len=snprintf(buf,remaining,"%s::",adb_device_banner);
 	remaining-=len;
 	buf+=len;
-	for(int i=0;i<3;i++){
+	int i = 0;
+	for(i=0;i<3;i++){
 		len=snprintf(buf,remaining,"%s=%s;",cnxn_props[i],values[i]);
 		remaining-=len;
 		buf+=len;
